@@ -22,37 +22,33 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CalculateMovement();
+    }
+    void CalculateMovement()
+    {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
         transform.Translate(Vector3.right * horizontalInput * _speed * Time.deltaTime);
         transform.Translate(Vector3.up * verticalInput * _speed * Time.deltaTime);
-
-        // if position on the y is grater than 0
-        // y position = 0
-        // else if position on the y is less 3.8f
-        // y position = 3.8f
-
-        if(transform.position.y >=0)
+    
+        if (transform.position.y >= 0)
         {
             transform.position = new Vector3(transform.position.x, 0, 0);
         }
-        else if(transform.position.y <= -3.8f)
+        else if (transform.position.y <= -3.8f)
         {
             transform.position = new Vector3(transform.position.x, -3.8f, 0);
         }
-        // if player position on the x > 11
-        // x position = -11
-        // else if player position on the x < -11
-        // x position = 11
-        if(transform.position.x >=13)
+       
+        if (transform.position.x >= 12)
         {
-            transform.position = new Vector3(-13, transform.position.y, 0);
+            transform.position = new Vector3(-12, transform.position.y, 0);
         }
 
-        else if(transform.position.x <=-13)
+        else if (transform.position.x <= -12)
         {
-            transform.position = new Vector3(13, transform.position.y, 0);
+            transform.position = new Vector3(12, transform.position.y, 0);
         }
 
     }
