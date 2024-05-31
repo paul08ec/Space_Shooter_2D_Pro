@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 801449761}
   - component: {fileID: 801449760}
   - component: {fileID: 801449759}
-  - component: {fileID: 801449758}
   - component: {fileID: 801449762}
   m_Layer: 0
   m_Name: Player
@@ -141,19 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &801449758
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801449757}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &801449759
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -228,6 +214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3.5
+  _laserPrefab: {fileID: 3454769706719459521, guid: 1b06e7ea1fd5e5a4992926efceb27848,
+    type: 3}
 --- !u!1 &1468675095
 GameObject:
   m_ObjectHideFlags: 0
