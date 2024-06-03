@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class laser : MonoBehaviour
 {
-    // variable for speed = 8
 
     [SerializeField]
     private int _speed = 8 ;
