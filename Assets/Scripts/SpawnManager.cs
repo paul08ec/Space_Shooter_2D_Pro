@@ -25,8 +25,6 @@ public class SpawnManager : MonoBehaviour
     
 
     IEnumerator SpawnRoutine()
-       
-
     {
         while(_stopSpawning == false)
         {
@@ -35,7 +33,6 @@ public class SpawnManager : MonoBehaviour
             newEnemy.transform.parent = (_enemyContainer.transform);
             yield return new WaitForSeconds(5.0f);
         }
-        
     
     }
     public void OnPlayerDead()

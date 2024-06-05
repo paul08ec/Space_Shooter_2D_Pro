@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
 
         if(_spawnManager == null)
         {
-            Debug.LogError("The player is null");
+            Debug.LogError("The player is  null");
         }
     }
 
@@ -77,10 +77,10 @@ public class Player : MonoBehaviour
     void FireLaser()
     {
 
-        {
+        
             _canFire = Time.time + _fireRate;
             Instantiate(_laserPrefab, transform.position + new Vector3(0, 1.1f, 0), Quaternion.identity);
-        }
+        
 
     }
     public void Damage()

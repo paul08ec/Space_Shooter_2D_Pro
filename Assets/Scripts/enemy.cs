@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [SerializeField]
     private float _enemySpeed = 4;
@@ -18,9 +18,9 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
         transform.Translate(Vector3.down * _enemySpeed * Time.deltaTime);
-         if (transform.position.y<=-5)
+        if (transform.position.y <= -5)
         {
             float ramdonX = Random.Range(-12f, 12f);
 
@@ -28,6 +28,8 @@ public class enemy : MonoBehaviour
         }
 
     }
+
+       
     private void OnTriggerEnter2D(Collider2D other)
     {
        
